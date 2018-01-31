@@ -1,6 +1,7 @@
 #!/bin/sh -e
 
-cat /etc/prometheus/prometheus.yml > /tmp/prometheus.yml
+cat /etc/prometheus/prometheus.yml |\
+    sed "s@#GRAFANA#@$GRAFANA_URL@g" > /tmp/prometheus.yml
 
 #JOBS=mongo-exporter:9111 redis-exporter:9112
 
