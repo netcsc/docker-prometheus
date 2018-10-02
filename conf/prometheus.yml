@@ -28,7 +28,10 @@ scrape_configs:
       - targets: ['cloudwatch:9106']
 
   - job_name: 'mongodb'
-
+    
+    scrape_interval:     30s
+    evaluation_interval: 30s
+    
     static_configs:
       - targets: ['mongodb:9001']
 
