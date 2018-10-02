@@ -1,4 +1,4 @@
-FROM prom/prometheus:latest
+FROM prom/prometheus:v2.1.0
 
 COPY conf /etc/prometheus/
 COPY rules/alert.rules /etc/prometheus/alert.rules
