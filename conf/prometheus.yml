@@ -33,7 +33,7 @@ scrape_configs:
     scrape_timeout: 15s
 
     static_configs:
-      - targets: ['mongodb:9001']
+      - targets: ['mongodb:9216']
 
   - job_name: 'grafana'
 
